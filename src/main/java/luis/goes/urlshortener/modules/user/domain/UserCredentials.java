@@ -4,8 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import luis.goes.urlshortener.modules.valueObject.Email;
-import luis.goes.urlshortener.modules.valueObject.Password;
+import luis.goes.urlshortener.modules.user.valueObject.Email;
+import luis.goes.urlshortener.modules.user.valueObject.Password;
 
 @Embeddable
 @NoArgsConstructor

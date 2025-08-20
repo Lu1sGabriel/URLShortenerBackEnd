@@ -10,7 +10,7 @@ import luis.goes.urlshortener.core.shared.mapper.entityToDto.Mappable;
 import luis.goes.urlshortener.modules.authority.domain.AuthorityEntity;
 import luis.goes.urlshortener.modules.url.domain.URLEntity;
 import luis.goes.urlshortener.modules.userAuthority.domain.UserAuthorityEntity;
-import luis.goes.urlshortener.modules.valueObject.Name;
+import luis.goes.urlshortener.modules.user.valueObject.Name;
 
 import java.util.HashSet;
 import java.util.List;
