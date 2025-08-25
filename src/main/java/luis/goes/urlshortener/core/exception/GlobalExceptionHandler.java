@@ -38,14 +38,14 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<ErrorResponse> handleTypeMismatch() {
-        ErrorResponse error = new ErrorResponse(
-                "Invalid ID: The given value, is an invalid ID");
+        ErrorResponse error = new ErrorResponse("Invalid ID: The given value, is an invalid ID");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
     @ExceptionHandler(NoResourceFoundException.class)
     public ResponseEntity<ErrorResponse> handleTypeMismatch(NoResourceFoundException ex) {
-        String formatedMessage = ex.getMessage().replaceFirst("No static resource", "No static resource was found for").replace(".", "");
+        String formatedMessage = ex.getMessage().replaceFirst("No static resource", "No static resource was found for")
+                .replace(".", "");
         ErrorResponse error = new ErrorResponse(formatedMessage);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
@@ -54,7 +54,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGenericException() {
         ErrorResponse error = new ErrorResponse("Internal server error. That's not your fault!");
-
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 

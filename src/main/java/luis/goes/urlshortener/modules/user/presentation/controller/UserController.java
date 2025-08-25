@@ -45,7 +45,7 @@ public class UserController {
         return ResponseEntity.ok(userUseCases.getGetters().byEmail(email));
     }
 
-    @GetMapping(value = "/userAuthorities")
+    @GetMapping(value = "/authorities")
     public ResponseEntity<UserWithAuthorityDto> getAllUserAuthorities() {
         UUID userId = getUserIdByJwt();
         return ResponseEntity.ok(userUseCases.getGetters().allUserAuthorities(userId));

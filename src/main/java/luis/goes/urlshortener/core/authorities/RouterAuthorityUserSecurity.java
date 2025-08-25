@@ -18,7 +18,7 @@ public class RouterAuthorityUserSecurity implements IRouterAuthoritySecurity {
                 .requestMatchers(HttpMethod.GET, "/api/v1/user").hasAuthority(AuthorityUser.VIEW_ALL.getValue())
                 .requestMatchers(HttpMethod.GET, "/api/v1/user/name/*").hasAuthority(AuthorityUser.GET_BY_NAME.getValue())
                 .requestMatchers(HttpMethod.GET, "/api/v1/user/email/*").hasAuthority(AuthorityUser.GET_BY_EMAIL.getValue())
-                .requestMatchers(HttpMethod.GET, "/api/v1/user/userAuthorities").hasAuthority(AuthorityUser.VIEW_ALL_AUTHORITIES.getValue());
+                .requestMatchers(HttpMethod.GET, "/api/v1/user/authorities").hasAuthority(AuthorityUser.VIEW_ALL_AUTHORITIES.getValue());
 
         // POST
         auth
